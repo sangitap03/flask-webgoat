@@ -7,9 +7,9 @@ jobs:
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/python@master
+        run: |
+          echo "SNYK_TOKEN: $SNYK_TOKEN"
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: auth
-      - name: Snyk token
-          run: echo "${{ secrets.SNYK_TOKEN }}"

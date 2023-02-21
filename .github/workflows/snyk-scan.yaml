@@ -12,5 +12,4 @@ jobs:
           echo "SNYK_TOKEN: $SNYK_TOKEN"
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          command: auth
+        
